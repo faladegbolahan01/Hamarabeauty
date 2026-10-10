@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product | Hamara Beauty</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <!-- Product CSS -->
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                Hamara<span>Beauty</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="nav-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <a href="cart.html" class="cart-button">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span id="cartCount">0</span>
+
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= BREADCRUMB ================= -->
+
+    <section class="breadcrumb-section">
+
+        <div class="container">
+
+            <div class="breadcrumb">
+
+                <a href="index.html">Home</a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <a href="shop.html">Shop</a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span id="breadcrumbProduct">
+                    Product
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCT DETAILS ================= -->
+
+    <main class="product-section">
+
+        <div class="container">
+
+            <div class="product-layout">
+
+
+                <!-- PRODUCT IMAGE -->
+
+                <div
+                    class="product-gallery"
+                    data-aos="fade-right"
+                >
+
+                    <div class="main-image">
+
+                        <img
+                            id="productImage"
+                            src=""
+                            alt="Product"
+                        >
+
+                        <span
+                            class="product-badge"
+                            id="productBadge"
+                        >
+                        </span>
+
+                        <button
+                            class="image-wishlist"
+                            id="wishlistButton"
+                            aria-label="Add to wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT INFORMATION -->
+
+                <div
+                    class="product-details"
+                    data-aos="fade-left"
+                >
+
+                    <p
+                        class="product-category"
+                        id="productCategory"
+                    >
+                        BEAUTY
+                    </p>
+
+                    <h1 id="productName">
+                        Loading product...
+                    </h1>
+
+
+                    <!-- Rating -->
+
+                    <div class="rating-row">
+
+                        <div class="stars">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+                        <span>
+                            4.9
+                        </span>
+
+                        <a href="#reviews">
+                            (24 reviews)
+                        </a>
+
+                    </div>
+
+
+                    <!-- Price -->
+
+                    <div class="product-price" id="productPrice">
+                        ₦0
+                    </div>
+
+
+                    <!-- Description -->
+
+                    <p
+                        class="product-description"
+                        id="productDescription"
+                    >
+                        Loading product description...
+                    </p>
+
+
+                    <div class="divider"></div>
+
+
+                    <!-- Quantity -->
+
+                    <div class="quantity-section">
+
+                        <span class="quantity-label">
+                            Quantity
+                        </span>
+
+                        <div class="quantity-control">
+
+                            <button
+                                id="decreaseQuantity"
+                                aria-label="Decrease quantity"
+                            >
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+
+                            <span id="quantity">
+                                1
+                            </span>
+
+                            <button
+                                id="increaseQuantity"
+                                aria-label="Increase quantity"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="purchase-buttons">
+
+                        <button
+                            class="add-to-cart"
+                            id="addToCart"
+                        >
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                            Add to Bag
+                        </button>
+
+                        <button
+                            class="buy-now"
+                            id="buyNow"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+
+                    <!-- Benefits -->
+
+                    <div class="product-benefits">
+
+                        <div class="benefit">
+
+                            <i class="fa-solid fa-truck-fast"></i>
+
+                            <div>
+                                <strong>Fast Delivery</strong>
+
+                                <span>
+                                    Delivery across Nigeria
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="benefit">
+
+                            <i class="fa-solid fa-shield-heart"></i>
+
+                            <div>
+                                <strong>Authentic Products</strong>
+
+                                <span>
+                                    Carefully selected beauty products
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="benefit">
+
+                            <i class="fa-solid fa-rotate-left"></i>
+
+                            <div>
+                                <strong>Easy Returns</strong>
+
+                                <span>
+                                    Shop with confidence
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= PRODUCT INFORMATION ================= -->
+
+    <section class="information-section">
+
+        <div class="container">
+
+            <div class="information-tabs">
+
+                <button class="info-tab active">
+                    Description
+                </button>
+
+                <button class="info-tab">
+                    Details
+                </button>
+
+                <button class="info-tab">
+                    Reviews
+                </button>
+
+            </div>
+
+
+            <div class="information-content">
+
+                <div class="info-panel active">
+
+                    <h2>
+                        Beauty made for you.
+                    </h2>
+
+                    <p id="longDescription">
+                        Discover a carefully selected beauty essential
+                        designed to complement your everyday routine.
+                        Each Hamara Beauty product is selected with
+                        quality, elegance and confidence in mind.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RELATED PRODUCTS ================= -->
+
+    <section class="related-section">
+
+        <div class="container">
+
+            <div
+                class="section-heading"
+                data-aos="fade-up"
+            >
+
+                <p>YOU MAY ALSO LIKE</p>
+
+                <h2>
+                    Complete Your
+                    <span>Beauty Routine</span>
+                </h2>
+
+            </div>
+
+
+            <div
+                class="related-grid"
+                id="relatedProducts"
+            >
+                <!-- Generated by JavaScript -->
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div class="newsletter-container">
+
+            <div>
+
+                <p class="section-mini-title">
+                    STAY BEAUTIFUL
+                </p>
+
+                <h2>
+                    Beauty inspiration,
+                    <span>straight to you.</span>
+                </h2>
+
+            </div>
+
+            <form id="newsletterForm">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    Hamara<span>Beauty</span>
+                </a>
+
+                <p>
+                    Beauty essentials created to help you
+                    feel confident, beautiful and completely you.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Shop</h3>
+
+                <a href="shop.html">Makeup</a>
+                <a href="shop.html">Skincare</a>
+                <a href="shop.html">Hair</a>
+                <a href="shop.html">Fragrance</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Help</h3>
+
+                <a href="#">Delivery</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQs</a>
+                <a href="#">Privacy Policy</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Hamara Beauty. All rights reserved.
+            </p>
+
+            <p>
+                Made with
+                <i class="fa-solid fa-heart"></i>
+                for beauty lovers.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- AOS -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Product JS -->
+
+    <script src="./product.js"></script>
+
+</body>
+</html>

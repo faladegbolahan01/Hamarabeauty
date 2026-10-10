@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Hamara Beauty - Premium beauty services and beauty products."
+    >
+
+    <title>Hamara Beauty | Your Beauty. Your Confidence. Your Glow.</title>
+
+
+    <!-- ================================
+         GOOGLE FONTS
+    ================================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ================================
+         AOS ANIMATION
+    ================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    >
+
+
+    <!-- ================================
+         FONT AWESOME
+    ================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- ================================
+         CSS
+    ================================= -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         HEADER / NAVBAR
+    ================================= -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="navbar container">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-main">
+                    Hamara
+                </span>
+
+                <span class="logo-accent">
+                    Beauty
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="./about.html" class="nav-link">
+                    About
+                </a>
+
+                <a href="./services.html" class="nav-link">
+                    Services
+                </a>
+
+                <a href=".//shop.html" class="nav-link">
+                    Shop
+                </a>
+
+                <a href="./gallery.html" class="nav-link">
+                    Gallery
+                </a>
+
+                <a href="#reviews.html" class="nav-link">
+                    Reviews
+                </a>
+
+                <a href="./contact.html" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+
+                <!-- SEARCH -->
+
+                <button
+                    class="nav-action"
+                    id="searchButton"
+                    aria-label="Search"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+
+                <!-- CART -->
+
+                <a
+                    href="cart.html"
+                    class="nav-action cart-button"
+                    aria-label="Shopping bag"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- BOOK -->
+
+                <a
+                    href="./booking.html"
+                    class="nav-book"
+                >
+                    Book Now
+                </a>
+
+
+                <!-- MOBILE BUTTON -->
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         SEARCH OVERLAY
+    ================================= -->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+    >
+
+        <button
+            class="search-close"
+            id="searchClose"
+            aria-label="Close search"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="search-box">
+
+            <span>
+                SEARCH HAMARA BEAUTY
+            </span>
+
+            <h2>
+                Find something beautiful.
+            </h2>
+
+
+            <div class="search-field">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================= -->
+
+    <main>
+
+
+        <!-- =================================
+             HERO
+        ================================= -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-content container">
+
+
+                <div
+                    class="hero-copy"
+                    data-aos="fade-right"
+                    data-aos-duration="1200"
+                >
+
+                    <span class="eyebrow">
+                        PREMIUM BEAUTY & WELLNESS
+                    </span>
+
+
+                    <h1>
+                        Your Beauty.
+                        <br>
+
+                        Your Confidence.
+                        <br>
+
+                        <em>Your Glow.</em>
+                    </h1>
+
+
+                    <p>
+                        Discover premium beauty services and
+                        carefully selected products created to
+                        make you look beautiful, feel confident
+                        and shine with your own unique glow.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#booking"
+                            class="btn btn-primary"
+                        >
+
+                            Book An Appointment
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#shop"
+                            class="btn btn-outline"
+                        >
+
+                            Explore Products
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-trust">
+
+                        <div class="trust-item">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Professional Services
+                            </span>
+
+                        </div>
+
+
+                        <div class="trust-item">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>
+                                Quality Products
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-scroll">
+
+                <span></span>
+
+                Scroll to explore
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             FEATURES
+        ================================= -->
+
+        <section class="features">
+
+            <div class="container features-grid">
+
+
+                <div
+                    class="feature"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Premium Quality
+                        </h3>
+
+                        <p>
+                            Beauty products you can trust.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="feature"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Professional Care
+                        </h3>
+
+                        <p>
+                            Beauty services made for you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="feature"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                >
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Fast Delivery
+                        </h3>
+
+                        <p>
+                            We deliver across Nigeria.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="feature"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                >
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Secure Payment
+                        </h3>
+
+                        <p>
+                            Safe and protected checkout.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             ABOUT
+        ================================= -->
+
+        <section
+            class="about section"
+            id="about"
+        >
+
+            <div class="container about-grid">
+
+
+                <div
+                    class="about-images"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                >
+
+                    <div class="about-main-image">
+
+                        <img
+                           src="https://i.pinimg.com/736x/f9/4d/b6/f94db6e4093830f92cfe56c381deacf8.jpg"
+                            alt="Beauty woman"
+                        >
+
+                    </div>
+
+
+                    <div class="about-small-image">
+
+                        <img
+                           src="https://i.pinimg.com/736x/2e/ab/f6/2eabf61535b8723376d8ee2a0d77f62c.jpg"
+                            alt="Beauty products"
+                        >
+
+                    </div>
+
+
+                    <div class="about-badge">
+
+                        <strong>
+                            100%
+                        </strong>
+
+                        <span>
+                            Beauty<br>
+                            Focused
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    class="about-content"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                >
+
+                    <span class="section-label">
+                        ABOUT HAMARA BEAUTY
+                    </span>
+
+
+                    <h2>
+                        Beauty that makes
+                        <em>you</em> feel like you.
+                    </h2>
+
+
+                    <p>
+                        At Hamara Beauty, we believe beauty is
+                        more than appearance. It is confidence,
+                        self-expression and feeling comfortable
+                        in your own skin.
+                    </p>
+
+
+                    <p>
+                        From professional beauty services to
+                        carefully selected beauty products,
+                        everything we offer is designed with
+                        you in mind.
+                    </p>
+
+
+                    <a
+                        href="#contact"
+                        class="text-link"
+                    >
+
+                        Learn More About Us
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SERVICES
+        ================================= -->
+
+        <section
+            class="services section"
+            id="services"
+        >
+
+            <div class="container">
+
+
+                <div
+                    class="section-heading"
+                    data-aos="fade-up"
+                >
+
+                    <div>
+
+                        <span class="section-label">
+                            WHAT WE OFFER
+                        </span>
+
+                        <h2>
+                            Our Beauty Services
+                        </h2>
+
+                        <p>
+                            Professional beauty experiences
+                            designed to bring out your best.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="#booking"
+                        class="text-link"
+                    >
+
+                        Book A Service
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="services-grid">
+
+
+                    <article
+                        class="service-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="service-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=85"
+                                alt="Makeup service"
+                            >
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <span>
+                                01
+                            </span>
+
+                            <h3>
+                                Makeup
+                            </h3>
+
+                            <p>
+                                Professional makeup for
+                                everyday looks and special
+                                occasions.
+                            </p>
+
+                            <a href="#booking">
+                                Book Service
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="service-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+
+                        <div class="service-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=900&q=85"
+                                alt="Hair beauty service"
+                            >
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <span>
+                                02
+                            </span>
+
+                            <h3>
+                                Hair
+                            </h3>
+
+                            <p>
+                                Beautiful hair styling designed
+                                around your personal look.
+                            </p>
+
+                            <a href="#booking">
+                                Book Service
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="service-card"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+
+                        <div class="service-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85"
+                                alt="Nail beauty service"
+                            >
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <span>
+                                03
+                            </span>
+
+                            <h3>
+                                Nails
+                            </h3>
+
+                            <p>
+                                Elegant nail care and beautiful
+                                finishes for every occasion.
+                            </p>
+
+                            <a href="#booking">
+                                Book Service
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article
+                        class="service-card"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
+
+                        <div class="service-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=900&q=85"
+                                alt="Beauty treatment"
+                            >
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <span>
+                                04
+                            </span>
+
+                            <h3>
+                                Beauty Care
+                            </h3>
+
+                            <p>
+                                Relaxing beauty treatments created
+                                to help you feel refreshed.
+                            </p>
+
+                            <a href="#booking">
+                                Book Service
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SHOP
+        ================================= -->
+
+        <section
+            class="shop section"
+            id="shop"
+        >
+
+            <div class="container">
+
+
+                <div
+                    class="section-heading"
+                    data-aos="fade-up"
+                >
+
+                    <div>
+
+                        <span class="section-label">
+                            SHOP OUR COLLECTION
+                        </span>
+
+                        <h2>
+                            Beauty Favourites
+                        </h2>
+
+                        <p>
+                            Discover products selected to
+                            elevate your beauty routine.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="shop.html"
+                        class="text-link"
+                    >
+
+                        View All Products
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="products-grid">
+
+
+                    <!-- PRODUCT 1 -->
+
+                    <article
+                        class="product-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="sale">
+                                -15%
+                            </span>
+
+                            <button class="wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+
+                            <img
+                               src="https://i.pinimg.com/736x/40/e7/a4/40e7a42154a670f855e3f89b5b8b12e7.jpg"
+                            >
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                FACE
+                            </span>
+
+                            <h3>
+                                Matte Foundation
+                            </h3>
+
+
+                            <div class="rating">
+                                ★★★★★
+                                <small>
+                                    (24)
+                                </small>
+                            </div>
+
+
+                            <div class="price">
+
+                                <strong>
+                                    ₦12,500
+                                </strong>
+
+                                <del>
+                                    ₦14,700
+                                </del>
+
+                            </div>
+
+
+                            <button
+                                class="add-cart"
+                                data-product="Matte Foundation"
+                            >
+                                Add To Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 2 -->
+
+                    <article
+                        class="product-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="sale">
+                                -20%
+                            </span>
+
+                            <button class="wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1583241800698-e8ab01830a07?auto=format&fit=crop&w=800&q=85"
+                                alt="Eyeshadow Palette"
+                            >
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                EYES
+                            </span>
+
+                            <h3>
+                                Eyeshadow Palette
+                            </h3>
+
+
+                            <div class="rating">
+                                ★★★★★
+                                <small>
+                                    (18)
+                                </small>
+                            </div>
+
+
+                            <div class="price">
+
+                                <strong>
+                                    ₦16,800
+                                </strong>
+
+                                <del>
+                                    ₦21,000
+                                </del>
+
+                            </div>
+
+
+                            <button
+                                class="add-cart"
+                                data-product="Eyeshadow Palette"
+                            >
+                                Add To Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 3 -->
+
+                    <article
+                        class="product-card"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+
+                        <div class="product-image">
+
+                            <button class="wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?auto=format&fit=crop&w=800&q=85"
+                                alt="Matte Lipstick"
+                            >
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                LIPS
+                            </span>
+
+                            <h3>
+                                Matte Lipstick
+                            </h3>
+
+
+                            <div class="rating">
+                                ★★★★★
+                                <small>
+                                    (31)
+                                </small>
+                            </div>
+
+
+                            <div class="price">
+
+                                <strong>
+                                    ₦9,500
+                                </strong>
+
+                            </div>
+
+
+                            <button
+                                class="add-cart"
+                                data-product="Matte Lipstick"
+                            >
+                                Add To Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 4 -->
+
+                    <article
+                        class="product-card"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="sale">
+                                -10%
+                            </span>
+
+                            <button class="wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=85"
+                                alt="Makeup Brush Set"
+                            >
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                BRUSHES
+                            </span>
+
+                            <h3>
+                                Makeup Brush Set
+                            </h3>
+
+
+                            <div class="rating">
+                                ★★★★★
+                                <small>
+                                    (42)
+                                </small>
+                            </div>
+
+
+                            <div class="price">
+
+                                <strong>
+                                    ₦22,000
+                                </strong>
+
+                                <del>
+                                    ₦24,500
+                                </del>
+
+                            </div>
+
+
+                            <button
+                                class="add-cart"
+                                data-product="Makeup Brush Set"
+                            >
+                                Add To Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             WHY CHOOSE US
+        ================================= -->
+
+        <section class="why-us section">
+
+            <div class="container why-grid">
+
+
+                <div
+                    class="why-content"
+                    data-aos="fade-right"
+                >
+
+                    <span class="section-label">
+                        WHY HAMARA BEAUTY
+                    </span>
+
+                    <h2>
+                        Because your beauty
+                        deserves more.
+                    </h2>
+
+                    <p>
+                        We combine quality products,
+                        professional beauty services and
+                        genuine care to create an experience
+                        that puts you first.
+                    </p>
+
+
+                    <div class="why-list">
+
+
+                        <div class="why-item">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Quality You Can Trust
+                                </h3>
+
+                                <p>
+                                    Carefully selected products
+                                    and professional services.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="why-item">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Beauty Made Personal
+                                </h3>
+
+                                <p>
+                                    Your style, your preferences,
+                                    your experience.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="why-item">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Customer First
+                                </h3>
+
+                                <p>
+                                    We care about every customer
+                                    who walks through our doors.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    class="why-image"
+                    data-aos="fade-left"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Beauty products"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             GALLERY
+        ================================= -->
+
+        <section
+            class="gallery section"
+            id="gallery"
+        >
+
+            <div class="container">
+
+
+                <div
+                    class="section-heading"
+                    data-aos="fade-up"
+                >
+
+                    <div>
+
+                        <span class="section-label">
+                            OUR WORLD
+                        </span>
+
+                        <h2>
+                            Beauty In Every Detail
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-grid">
+
+
+                    <div
+                        class="gallery-item gallery-large"
+                        data-aos="zoom-in"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1000&q=85"
+                            alt="Beauty products"
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="gallery-item"
+                        data-aos="zoom-in"
+                        data-aos-delay="100"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=85"
+                            alt="Makeup brushes"
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="gallery-item"
+                        data-aos="zoom-in"
+                        data-aos-delay="200"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=800&q=85"
+                            alt="Skincare"
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="gallery-item"
+                        data-aos="zoom-in"
+                        data-aos-delay="300"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=800&q=85"
+                            alt="Beauty"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             REVIEWS
+        ================================= -->
+
+        <section
+            class="reviews section"
+            id="reviews"
+        >
+
+            <div class="container">
+
+
+                <div
+                    class="section-heading center"
+                    data-aos="fade-up"
+                >
+
+                    <span class="section-label">
+                        CUSTOMER LOVE
+                    </span>
+
+                    <h2>
+                        What Our Customers Say
+                    </h2>
+
+                    <p>
+                        Real experiences from people who
+                        choose Hamara Beauty.
+                    </p>
+
+                </div>
+
+
+
+                <div class="reviews-grid">
+
+
+                    <article
+                        class="review-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "I absolutely loved my experience.
+                            The service was amazing and I left
+                            feeling so confident."
+                        </p>
+
+                        <strong>
+                            Amaka O.
+                        </strong>
+
+                        <span>
+                            Lagos
+                        </span>
+
+                    </article>
+
+
+
+                    <article
+                        class="review-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "The products are really good and
+                            delivery was faster than I expected.
+                            Definitely ordering again."
+                        </p>
+
+                        <strong>
+                            Sarah E.
+                        </strong>
+
+                        <span>
+                            Lagos
+                        </span>
+
+                    </article>
+
+
+
+                    <article
+                        class="review-card"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Hamara Beauty understands exactly
+                            what women want. Beautiful service
+                            from beginning to end."
+                        </p>
+
+                        <strong>
+                            Favour A.
+                        </strong>
+
+                        <span>
+                            Abuja
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             BOOKING CTA
+        ================================= -->
+
+        <section
+            class="booking"
+            id="booking"
+        >
+
+            <div class="booking-overlay"></div>
+
+
+            <div
+                class="container booking-content"
+                data-aos="fade-up"
+            >
+
+                <span class="section-label">
+                    READY WHEN YOU ARE
+                </span>
+
+                <h2>
+                    Your next beauty
+                    moment starts here.
+                </h2>
+
+                <p>
+                    Book your appointment today and
+                    let us take care of the rest.
+                </p>
+
+
+                <a
+                    href="#contact.html"
+                    class="btn btn-primary"
+                >
+
+                    Book Your Appointment
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             NEWSLETTER
+        ================================= -->
+
+        <section class="newsletter">
+
+            <div
+                class="container newsletter-content"
+                data-aos="fade-up"
+            >
+
+                <span class="section-label">
+                    JOIN OUR COMMUNITY
+                </span>
+
+                <h2>
+                    Stay beautiful.
+                    Stay inspired.
+                </h2>
+
+                <p>
+                    Get beauty tips, new arrivals,
+                    special offers and updates.
+                </p>
+
+
+                <form id="newsletterForm">
+
+                    <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+
+                <small id="newsletterMessage"></small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================= -->
+
+    <footer
+        class="footer"
+        id="contact"
+    >
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+
+                    <span class="logo-main">
+                        Hamara
+                    </span>
+
+                    <span class="logo-accent">
+                        Beauty
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Premium beauty services and products
+                    created to help you feel confident,
+                    beautiful and completely yourself.
+                </p>
+
+
+                <div class="socials">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About Us
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#shop">
+                    Shop
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Customer Care
+                </h3>
+
+                <a href="#reviews">
+                    Reviews
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping
+                </a>
+
+                <a href="#">
+                    Returns
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lagos, Nigeria
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +234 806 011 5395
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@hamarabeautyworld.com
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Hamara Beauty. All rights reserved.
+            </p>
+
+
+            <div>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =================================
+         WHATSAPP
+    ================================= -->
+
+    <a
+        href="https://wa.me/2348060115395"
+        class="whatsapp"
+        target="_blank"
+        aria-label="Chat on WhatsApp"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+
+    <!-- =================================
+         AOS JS
+    ================================= -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!-- =================================
+         MAIN JS
+    ================================= -->
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

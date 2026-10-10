@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Hamara Beauty</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
+    <!-- Checkout CSS -->
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                Hamara<span>Beauty</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="shop.html">Shop</a>
+
+                <a href="index.html#about">About</a>
+
+                <a href="index.html#services">Services</a>
+
+                <a href="index.html#gallery">Gallery</a>
+
+                <a href="index.html#contact">Contact</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="cart.html" class="back-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="cart-count">0</span>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CHECKOUT HERO
+         ===================================================== -->
+
+    <section class="checkout-hero">
+
+        <div
+            class="checkout-hero-content"
+            data-aos="fade-up"
+        >
+
+            <p class="eyebrow">
+                HAMARA BEAUTY
+            </p>
+
+            <h1>
+                Checkout
+            </h1>
+
+            <p>
+                Complete your details and prepare your beauty
+                essentials for delivery.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CHECKOUT SECTION
+         ===================================================== -->
+
+    <main class="checkout-section">
+
+        <div class="checkout-container">
+
+
+            <!-- =================================================
+                 CUSTOMER & DELIVERY FORM
+                 ================================================= -->
+
+            <section
+                class="checkout-form-section"
+                data-aos="fade-up"
+            >
+
+                <div class="section-heading">
+
+                    <p class="small-title">
+                        YOUR DETAILS
+                    </p>
+
+                    <h2>
+                        Delivery Information
+                    </h2>
+
+                    <p>
+                        Please enter your information below so
+                        we can deliver your order.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="checkoutForm"
+                    class="checkout-form"
+                >
+
+
+                    <!-- =========================================
+                         CONTACT INFORMATION
+                         ========================================= -->
+
+                    <div class="form-block">
+
+                        <div class="form-block-heading">
+
+                            <span class="step-number">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Contact Information
+                                </h3>
+
+                                <p>
+                                    How can we reach you?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group full-width">
+
+                                <label for="fullName">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="0801 234 5678"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         DELIVERY ADDRESS
+                         ========================================= -->
+
+                    <div class="form-block">
+
+                        <div class="form-block-heading">
+
+                            <span class="step-number">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Delivery Address
+                                </h3>
+
+                                <p>
+                                    Where should we deliver your order?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="state">
+                                    State
+                                </label>
+
+                                <select
+                                    id="state"
+                                    name="state"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select your state
+                                    </option>
+
+                                    <option value="Abia">
+                                        Abia
+                                    </option>
+
+                                    <option value="Adamawa">
+                                        Adamawa
+                                    </option>
+
+                                    <option value="Akwa Ibom">
+                                        Akwa Ibom
+                                    </option>
+
+                                    <option value="Anambra">
+                                        Anambra
+                                    </option>
+
+                                    <option value="Bauchi">
+                                        Bauchi
+                                    </option>
+
+                                    <option value="Bayelsa">
+                                        Bayelsa
+                                    </option>
+
+                                    <option value="Benue">
+                                        Benue
+                                    </option>
+
+                                    <option value="Borno">
+                                        Borno
+                                    </option>
+
+                                    <option value="Cross River">
+                                        Cross River
+                                    </option>
+
+                                    <option value="Delta">
+                                        Delta
+                                    </option>
+
+                                    <option value="Ebonyi">
+                                        Ebonyi
+                                    </option>
+
+                                    <option value="Edo">
+                                        Edo
+                                    </option>
+
+                                    <option value="Ekiti">
+                                        Ekiti
+                                    </option>
+
+                                    <option value="Enugu">
+                                        Enugu
+                                    </option>
+
+                                    <option value="Gombe">
+                                        Gombe
+                                    </option>
+
+                                    <option value="Imo">
+                                        Imo
+                                    </option>
+
+                                    <option value="Jigawa">
+                                        Jigawa
+                                    </option>
+
+                                    <option value="Kaduna">
+                                        Kaduna
+                                    </option>
+
+                                    <option value="Kano">
+                                        Kano
+                                    </option>
+
+                                    <option value="Katsina">
+                                        Katsina
+                                    </option>
+
+                                    <option value="Kebbi">
+                                        Kebbi
+                                    </option>
+
+                                    <option value="Kogi">
+                                        Kogi
+                                    </option>
+
+                                    <option value="Kwara">
+                                        Kwara
+                                    </option>
+
+                                    <option value="Lagos">
+                                        Lagos
+                                    </option>
+
+                                    <option value="Nasarawa">
+                                        Nasarawa
+                                    </option>
+
+                                    <option value="Niger">
+                                        Niger
+                                    </option>
+
+                                    <option value="Ogun">
+                                        Ogun
+                                    </option>
+
+                                    <option value="Ondo">
+                                        Ondo
+                                    </option>
+
+                                    <option value="Osun">
+                                        Osun
+                                    </option>
+
+                                    <option value="Oyo">
+                                        Oyo
+                                    </option>
+
+                                    <option value="Plateau">
+                                        Plateau
+                                    </option>
+
+                                    <option value="Rivers">
+                                        Rivers
+                                    </option>
+
+                                    <option value="Sokoto">
+                                        Sokoto
+                                    </option>
+
+                                    <option value="Taraba">
+                                        Taraba
+                                    </option>
+
+                                    <option value="Yobe">
+                                        Yobe
+                                    </option>
+
+                                    <option value="Zamfara">
+                                        Zamfara
+                                    </option>
+
+                                    <option value="FCT">
+                                        Federal Capital Territory
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="city">
+                                    City
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    placeholder="e.g. Ikeja"
+                                    autocomplete="address-level2"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="address">
+                                    Delivery Address
+                                </label>
+
+                                <textarea
+                                    id="address"
+                                    name="address"
+                                    rows="4"
+                                    placeholder="House number, street name, area..."
+                                    autocomplete="street-address"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="deliveryNote">
+                                    Delivery Note
+                                    <span>(Optional)</span>
+                                </label>
+
+                                <textarea
+                                    id="deliveryNote"
+                                    name="deliveryNote"
+                                    rows="3"
+                                    placeholder="Any instructions for the rider?"
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         PAYMENT METHOD
+                         ========================================= -->
+
+                    <div class="form-block">
+
+                        <div class="form-block-heading">
+
+                            <span class="step-number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Payment Method
+                                </h3>
+
+                                <p>
+                                    Choose how you would like to pay.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-options">
+
+
+                            <label class="payment-option selected">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="flutterwave"
+                                    checked
+                                >
+
+                                <span class="payment-radio">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+
+                                <span class="payment-option-content">
+
+                                    <strong>
+                                        Pay Online
+                                    </strong>
+
+                                    <small>
+                                        Pay securely with card,
+                                        bank transfer or USSD.
+                                    </small>
+
+                                </span>
+
+
+                                <i class="fa-solid fa-credit-card payment-icon"></i>
+
+                            </label>
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="pay-on-delivery"
+                                >
+
+                                <span class="payment-radio">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+
+                                <span class="payment-option-content">
+
+                                    <strong>
+                                        Pay on Delivery
+                                    </strong>
+
+                                    <small>
+                                        Available only where supported.
+                                    </small>
+
+                                </span>
+
+
+                                <i class="fa-solid fa-truck payment-icon"></i>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         SUBMIT
+                         ========================================= -->
+
+                    <button
+                        type="submit"
+                        class="place-order-btn"
+                        id="placeOrderBtn"
+                    >
+
+                        <span>
+                            Continue to Payment
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <div class="secure-checkout-note">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Your information is protected and
+                            your payment will be processed securely.
+                        </span>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- =================================================
+                 ORDER SUMMARY
+                 ================================================= -->
+
+            <aside
+                class="checkout-summary"
+                data-aos="fade-up"
+                data-aos-delay="150"
+            >
+
+                <div class="summary-top">
+
+                    <p class="small-title">
+                        YOUR ORDER
+                    </p>
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+                </div>
+
+
+                <!-- Cart products inserted by checkout.js -->
+
+                <div
+                    id="checkoutItems"
+                    class="checkout-items"
+                ></div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="checkoutSubtotal">
+                        ₦0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong id="checkoutShipping">
+                        Calculated at checkout
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="checkoutTotal">
+                        ₦0
+                    </strong>
+
+                </div>
+
+
+                <!-- TRUST -->
+
+                <div class="checkout-trust">
+
+                    <div>
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+                            Secure payment
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-truck"></i>
+
+                        <span>
+                            Reliable delivery
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <span>
+                            Made for you
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="cart.html"
+                    class="edit-cart"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Return to Cart
+
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    Hamara<span>Beauty</span>
+                </a>
+
+                <p>
+                    Beauty, confidence and elegance —
+                    all in one place.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Products
+                </a>
+
+                <a href="shop.html">
+                    Makeup
+                </a>
+
+                <a href="shop.html">
+                    Skincare
+                </a>
+
+                <a href="shop.html">
+                    Hair
+                </a>
+
+                <a href="shop.html">
+                    Fragrance
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Help
+                </h4>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Delivery Information
+                </a>
+
+                <a href="#">
+                    Returns
+                </a>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Hamara Beauty
+                </h4>
+
+                <a href="#">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Our Services
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Hamara Beauty. All rights reserved.
+            </p>
+
+            <p>
+                Made with
+                <i class="fa-solid fa-heart"></i>
+                for beauty lovers.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+<!-- Flutterwave -->
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+
+<!-- AOS Animation Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Initialize AOS -->
+<script>
+    AOS.init({
+        duration: 700,
+        once: true,
+        offset: 50
+    });
+</script>
+
+<!-- Checkout JavaScript -->
+<script src="./checkout.js"></script>
+</body>
+</html>

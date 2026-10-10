@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Makeup Appointment | Hamara Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"><link rel="stylesheet" href="booking.css">
+</head><body>
+<header class="navbar"><div class="nav-container">
+<a class="logo" href="index.html">Hamara<span>Beauty</span></a>
+<nav class="nav-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a class="active" href="booking.html">Book Now</a><a href="contact.html">Contact</a></nav>
+<a class="nav-cta" href="booking.html">Book an appointment</a><button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+</div></header>
+<main>
+<section class="hero"><p class="eyebrow" data-aos="fade-up">YOUR BEAUTY, YOUR MOMENT</p><h1 data-aos="fade-up" data-aos-delay="80">Reserve your <em>glam moment.</em></h1><p data-aos="fade-up" data-aos-delay="150">Choose your makeup service, select a date and available time, and your appointment is confirmed instantly.</p></section>
+<section class="booking-layout">
+<div class="form-panel" data-aos="fade-up">
+<div class="step-heading"><span>01</span><div><h2>Your appointment</h2><p>Select a service and where you would like us to meet.</p></div></div>
+<form id="bookingForm">
+<div class="field"><label for="service">Makeup service</label><select id="service" required><option value="">Choose a service</option><option value="Soft Glam">Soft Glam — 90 min</option><option value="Full Glam">Full Glam — 120 min</option><option value="Bridal Makeup">Bridal Makeup — 180 min</option><option value="Birthday / Event Makeup">Birthday / Event Makeup — 120 min</option><option value="Photoshoot Makeup">Photoshoot Makeup — 120 min</option><option value="Custom Makeup">Custom Makeup — 90 min</option></select></div>
+<div class="field"><label>Appointment location</label><div class="location-options"><label class="choice"><input type="radio" name="location" value="Studio" checked><span><b>At the studio</b><small>Visit our studio</small></span></label><label class="choice"><input type="radio" name="location" value="Mobile"><span><b>Mobile service</b><small>We come to you</small></span></label></div></div>
+<div class="field" id="addressField" hidden><label for="address">Your full address / area</label><input id="address" maxlength="240" placeholder="Street, area, city"></div>
+<div class="field"><label for="date">Choose a date</label><input id="date" type="date" required></div>
+<div class="field"><label>Available times</label><div id="slots" class="slots"><p class="hint">Choose a service and date to see available times.</p></div><input id="time" type="hidden" required></div>
+<div class="step-heading customer-heading"><span>02</span><div><h2>Your details</h2><p>So we can identify your reservation.</p></div></div>
+<div class="two-col"><div class="field"><label for="name">Full name</label><input id="name" required maxlength="100" autocomplete="name" placeholder="Your name"></div><div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" required maxlength="30" autocomplete="tel" placeholder="+234..."></div></div>
+<div class="field"><label for="email">Email (optional)</label><input id="email" type="email" maxlength="160" autocomplete="email" placeholder="you@example.com"></div>
+<div class="field"><label for="notes">Extra details (optional)</label><textarea id="notes" rows="3" maxlength="700" placeholder="Event date, preferred look, or other notes"></textarea></div>
+<div id="message" role="status" aria-live="polite"></div><button class="primary-btn" id="submitBtn" type="submit">Confirm appointment <span>↗</span></button>
+<p class="fineprint">Appointments are confirmed once the booking request is successfully saved. Please arrive on time. Prices and deposits can be confirmed with Hamara Beauty.</p>
+</form></div>
+<aside class="summary-panel" data-aos="fade-left"><div class="summary-art"><span>HB</span></div><p class="eyebrow">HAMARA BEAUTY</p><h2>A little time for your glow.</h2><p>From soft glam to bridal beauty, we create a look that feels like you.</p><div class="summary-line"><span>Booking</span><strong>Instant confirmation</strong></div><div class="summary-line"><span>Location</span><strong>Studio or mobile</strong></div><div class="summary-line"><span>Availability</span><strong>Live calendar</strong></div><div class="summary-note">Need help choosing a look? You can contact us on WhatsApp after booking.</div><a id="whatsappHelp" class="secondary-btn" href="#" target="_blank" rel="noopener">Ask us on WhatsApp ↗</a></aside>
+</section>
+</main><footer><a class="logo" href="index.html">Hamara<span>Beauty</span></a><p>Beauty, confidence and elegance — all in one place.</p><small>© <span id="year"></span> Hamara Beauty</small></footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script src="booking.js"></script>
+</body></html>

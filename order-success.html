@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Order Confirmation | Hamara Beauty</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: #fbf7f4;
+      color: #342722;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .success-card {
+      width: 100%;
+      max-width: 560px;
+      padding: clamp(24px, 6vw, 48px);
+      background: #fff;
+      border: 1px solid #eee2dc;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 18px 60px rgba(68, 39, 27, 0.08);
+    }
+
+    .brand {
+      margin-bottom: 28px;
+      color: #71463d;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .check {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #f0ebe7;
+      color: #71463d;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin-bottom: 14px;
+      font: 700 clamp(30px, 6vw, 42px)/1.15
+        "Playfair Display", serif;
+    }
+
+    .intro {
+      max-width: 410px;
+      margin: 0 auto 26px;
+      color: #76665f;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .details {
+      margin: 24px 0;
+      padding: 18px;
+      border-radius: 14px;
+      background: #fbf7f4;
+      text-align: left;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 13px 0;
+      border-bottom: 1px solid #eadfd9;
+      font-size: 14px;
+    }
+
+    .detail-row:last-child {
+      border-bottom: 0;
+    }
+
+    .label {
+      color: #76665f;
+      flex-shrink: 0;
+    }
+
+    .value {
+      max-width: 65%;
+      text-align: right;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .status-pending {
+      color: #946200;
+    }
+
+    .status-verified {
+      color: #24783b;
+    }
+
+    .status-failed {
+      color: #b42318;
+    }
+
+    .note {
+      margin-top: 18px;
+      color: #8b7770;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border: 0;
+      border-radius: 999px;
+      background: #71463d;
+      color: #fff;
+      text-decoration: none;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #56342d;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #71463d;
+      background: #fff;
+      color: #71463d;
+    }
+
+    .btn-secondary:hover {
+      background: #f7efeb;
+      color: #56342d;
+    }
+
+    @media (max-width: 420px) {
+      body {
+        padding: 14px;
+      }
+
+      .success-card {
+        padding: 25px 18px;
+      }
+
+      .detail-row {
+        gap: 10px;
+        font-size: 13px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="success-card">
+    <div class="brand">Hamara Beauty</div>
+
+    <div class="check" id="statusIcon" aria-hidden="true">…</div>
+
+    <h1 id="pageTitle">Checking your order</h1>
+
+    <p class="intro" id="confirmationMessage" role="status">
+      Please wait while we check your payment confirmation.
+    </p>
+
+    <section class="details" aria-label="Order details">
+      <div class="detail-row">
+        <span class="label">Payment status</span>
+        <span class="value status-pending" id="paymentStatus">Checking…</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="label">Amount</span>
+        <span class="value" id="amountPaid">—</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="label">Transaction ID</span>
+        <span class="value" id="transactionId">—</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="label">Order items</span>
+        <span class="value" id="itemCount">—</span>
+      </div>
+    </section>
+
+    <p class="note" id="helpNote">
+      Your payment must be confirmed by the Hamara Beauty server.
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="shop.html">Continue shopping</a>
+      
+    </div>
+  </main>
+
+  <script>
+    "use strict";
+
+    function readStored(key) {
+      try {
+        return JSON.parse(localStorage.getItem(key) || "null");
+      } catch (error) {
+        return null;
+      }
+    }
+
+    const payment = readStored("hamaraLastPayment");
+    const order = readStored("hamaraLastOrder");
+
+    const elements = {
+      icon: document.getElementById("statusIcon"),
+      title: document.getElementById("pageTitle"),
+      message: document.getElementById("confirmationMessage"),
+      status: document.getElementById("paymentStatus"),
+      amount: document.getElementById("amountPaid"),
+      transaction: document.getElementById("transactionId"),
+      itemCount: document.getElementById("itemCount"),
+      note: document.getElementById("helpNote"),
+      support: document.getElementById("supportButton")
+    };
+
+    function formatAmount(amount, currency = "NGN") {
+      const value = Number(amount);
+
+      if (!Number.isFinite(value) || amount === null ||
+          amount === undefined || amount === "") {
+        return "Not available";
+      }
+
+      try {
+        return new Intl.NumberFormat("en-NG", {
+          style: "currency",
+          currency: currency,
+          maximumFractionDigits: 2
+        }).format(value);
+      } catch (error) {
+        return currency + " " + value.toLocaleString("en-NG");
+      }
+    }
+
+    function showUnverified(message) {
+      elements.icon.textContent = "!";
+      elements.title.textContent = "Payment not confirmed";
+      elements.message.textContent = message;
+      elements.status.textContent = "Unconfirmed";
+      elements.status.className = "value status-failed";
+      elements.note.textContent =
+        "Do not pay again immediately. Contact the store to check your transaction first.";
+    }
+
+    function showVerified() {
+      elements.icon.textContent = "✓";
+      elements.title.textContent = "Order confirmed!";
+      elements.message.textContent =
+        "Your payment has been verified successfully. Thank you for shopping with Hamara Beauty.";
+      elements.status.textContent = "Verified";
+      elements.status.className = "value status-verified";
+      elements.note.textContent =
+        "Keep your order details for your records. Thank you for choosing Hamara Beauty.";
+    }
+
+    if (order && Array.isArray(order.items)) {
+      const count = order.items.reduce(function (total, item) {
+        const quantity = Number(item.quantity);
+        return total + (
+          Number.isFinite(quantity) && quantity > 0 ? quantity : 1
+        );
+      }, 0);
+
+      elements.itemCount.textContent = String(count);
+      elements.amount.textContent = formatAmount(
+        order.total,
+        order.currency || "NGN"
+      );
+    }
+
+    if (payment) {
+      const transaction = payment.transactionId ?? payment.transaction_id;
+
+      if (transaction !== undefined && transaction !== null) {
+        elements.transaction.textContent = String(transaction);
+      }
+
+      if (payment.amount !== undefined) {
+        elements.amount.textContent = formatAmount(
+          payment.amount,
+          payment.currency || "NGN"
+        );
+      }
+    }
+
+    /*
+      IMPORTANT:
+      Only show "Verified" when checkout.js has saved its record
+      AFTER the backend's Flutterwave verification request succeeded.
+      This is a display check, not independent proof from the server.
+    */
+    const hasVerifiedRecord =
+      order &&
+      order.status === "paid" &&
+      payment &&
+      payment.transactionId !== undefined &&
+      payment.transactionId !== null &&
+      String(payment.transactionId) !== "" &&
+      order.txRef &&
+      payment.txRef === order.txRef;
+
+    if (hasVerifiedRecord) {
+      showVerified();
+    } else {
+      showUnverified(
+        "We could not find a complete verified payment record for this order. " +
+        "If you completed payment, contact the store to confirm the transaction."
+      );
+    }
+
+    elements.support.addEventListener("click", function () {
+      elements.message.textContent =
+        "Keep your Flutterwave transaction ID and order reference. " +
+        "Contact Hamara Beauty to confirm the payment.";
+      elements.note.textContent =
+        "Never share your card PIN, OTP, password, or Flutterwave secret key.";
+    });
+  </script>
+</body>
+</html>
