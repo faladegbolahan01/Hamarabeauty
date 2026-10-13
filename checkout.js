@@ -3,7 +3,7 @@
 // ========================================
 
 const CART_KEY = "hamaraCart";
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://hamarabeauty.onrender.com";
 
 const FLUTTERWAVE_PUBLIC_KEY =
   "FLWPUBK_TEST-2e1e8cd83641d77b647d4f555823efeb-X";
